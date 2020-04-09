@@ -41,5 +41,29 @@ func main() {
 	delete(m, "foo")
 	fmt.Println(m)
 
+	/*
+	Working with Structs
+	We can associate any type of data together
+	*/
+	type user struct {
+		ID int
+		FirstName string
+		LastName string
+	}
+	var u user
+	u.ID = 1
+	u.FirstName = "Kelvin"
+	u.LastName = "Murumba"
+	fmt.Println(u)
+
+	//Single line initialization of user
+	u2 := user{ID: 1,
+		FirstName: "Mercy",
+		LastName: "Nomzano",
+	}
+	fmt.Println(u2)
+
+
+
 
 }
