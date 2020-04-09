@@ -27,4 +27,19 @@ func main() {
 	s4 := slice[1:2]
 	fmt.Println(s2,s3,s4)
 
+	/*
+	Working with Maps
+	Maps are not read only
+	*/
+	m := map[string]int{"foo":42}
+	fmt.Println(m)
+	fmt.Println(m["foo"])
+
+	m["foo"]=11
+	fmt.Println(m)
+
+	delete(m, "foo")
+	fmt.Println(m)
+
+
 }
