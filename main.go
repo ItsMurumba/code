@@ -21,4 +21,10 @@ func main() {
 	slice = append(slice,4,42,27)
 	fmt.Println(slice)
 
+	//Slice allows select given elements in an array to work with
+	s2 := slice[1:]
+	s3 := slice[:2]
+	s4 := slice[1:2]
+	fmt.Println(s2,s3,s4)
+
 }
