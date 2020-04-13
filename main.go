@@ -13,6 +13,11 @@ type User struct {
 	LastName  string
 }
 
+//HTTPRequest :
+type HTTPRequest struct{
+	Method string
+}
+
 func main() {
 	u := models.User{
 		ID:        2,
@@ -94,5 +99,27 @@ func main() {
 	} else {
 		println("Not same user")
 	}
+
+
+	/*
+	working with switch statements
+	Has no default case but can define a special default case.
+	Has break implicitly implemented so no need to define it
+	*/
+	r := HTTPRequest{Method: "GET"}
+
+	switch r.Method{
+	case "GET":
+		println("Get request")
+	case "DELETE":
+		println("Delete request")
+	case "POST":
+		println("Post request")
+	case "PUT":
+		println("Put request")
+	default:
+		println("Unhandled method")
+	}
+
 
 }
