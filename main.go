@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 
 	"github.com/KelvinWanyama/webservice/models"
@@ -14,30 +13,23 @@ func main() {
 		LastName: "Murumba",
 	}
 	fmt.Println(u)
-
-	port := 3000
-	startWebServer(port)
-	err := startWebServer(port)
-	fmt.Println(err)
-
-	//returning multiple values
-	port, err2 := startWebServer2(port)
-	fmt.Println(port, err2)
-
-}
-
-func startWebServer(port int) error{
 	
-	fmt.Println("Starting server...")
-	fmt.Println("Server started on port", port)
+	/*
+	Working with Loops
+	*/
+	var i int
+	for i < 5 {
+		println(i)
+		i++
 
-	return errors.New("Something went wrong")
-}
+		if i == 3 {
+			continue
+		}
+		println("Continuing.....")
 
-//returning multiple values
-func startWebServer2(port int) (int,error){
-	
-	fmt.Println("Starting server...")
-	fmt.Println("Server started on port", port)
-	return port, nil
+		if i == 4 {
+			break
+		}
+	}
+
 }
