@@ -48,4 +48,18 @@ func main() {
 		x++
 	}
 
+	/*
+	Loops with collections: arrays, slices
+	When using only value, use _ in the for statement
+	*/
+	slice := []int{1, 2, 3}
+	for y, v := range slice {
+		println(y, v)
+	}
+
+	wellKnownPorts := map[string]int{"http": 80, "https": 443}
+	for y, v := range wellKnownPorts {
+		println(y, v)
+	}
+
 }
