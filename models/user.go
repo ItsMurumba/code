@@ -1,5 +1,6 @@
 package models
 
+// User : 
 type User struct {
 	ID int
 	FirstName string
@@ -11,10 +12,12 @@ var (
 	nextID = 1
 )
 
+// GetUsers : 
 func GetUsers() []*User  {
 	return users
 }
 
+// AddUser :
 func AddUser(u User) (User, error)  {
 	u.ID = nextID
 	nextID++
