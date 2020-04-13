@@ -38,4 +38,14 @@ func main() {
 	}
 	// println(i) variable i will not be accessible here.
 
+	//Infinite loop
+	var x int
+	for{
+		if x == 5 {
+			break
+		}
+		println(x)
+		x++
+	}
+
 }
