@@ -32,4 +32,10 @@ func main() {
 		}
 	}
 
+	//Implicit initalization within for loop scope
+	for i := 0; i < 5; i++ {
+		println(i)
+	}
+	// println(i) variable i will not be accessible here.
+
 }
