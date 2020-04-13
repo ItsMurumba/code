@@ -62,4 +62,12 @@ func main() {
 		println(y, v)
 	}
 
+	//Working with the Panic Function
+	println("Starting web server")
+
+	//do important things
+	//panic("Man down, I repeat man down, Someone call 911!")
+
+	println("Web server started")
+
 }
