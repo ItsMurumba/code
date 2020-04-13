@@ -6,16 +6,23 @@ import (
 	"github.com/KelvinWanyama/webservice/models"
 )
 
+// User :
+type User struct {
+	ID        int
+	FirstName string
+	LastName  string
+}
+
 func main() {
 	u := models.User{
-		ID: 2,
+		ID:        2,
 		FirstName: "Love",
-		LastName: "Murumba",
+		LastName:  "Murumba",
 	}
 	fmt.Println(u)
-	
+
 	/*
-	Working with Loops
+		Working with Loops
 	*/
 	var i int
 	for i < 5 {
@@ -40,7 +47,7 @@ func main() {
 
 	//Infinite loop
 	var x int
-	for{
+	for {
 		if x == 5 {
 			break
 		}
@@ -49,8 +56,8 @@ func main() {
 	}
 
 	/*
-	Loops with collections: arrays, slices
-	When using only value, use _ in the for statement
+		Loops with collections: arrays, slices
+		When using only value, use _ in the for statement
 	*/
 	slice := []int{1, 2, 3}
 	for y, v := range slice {
@@ -69,5 +76,23 @@ func main() {
 	//panic("Man down, I repeat man down, Someone call 911!")
 
 	println("Web server started")
+
+	//Working with if else
+	u1 := User{
+		ID:        1,
+		FirstName: "Mercy",
+		LastName:  "Nomzano",
+	}
+	u2 := User{
+		ID:        2,
+		FirstName: "Kelvin",
+		LastName:  "Murumba",
+	}
+
+	if u1.ID == u2.ID {
+		println("Same user")
+	} else {
+		println("Not same user")
+	}
 
 }
